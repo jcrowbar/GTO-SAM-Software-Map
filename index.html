@@ -1,1 +1,40 @@
-l
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zurich GTO SAM Software Map Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Zurich GTO SAM Software Map Tool</h1>
+    </header>
+
+    <div class="container">
+        <div class="hardware-area" id="hardwareArea">
+            <p>Drag your software here</p>
+        </div>
+        <div class="software-list" id="softwareList">
+            <div class="software" draggable="true" id="software1">Database Software</div>
+            <div class="software" draggable="true" id="software2">Security Tool</div>
+            <!-- Add more software as needed -->
+        </div>
+        <div class="license-summary" id="licenseSummary">
+            <h3>License Summary</h3>
+            <table id="summaryTable">
+                <tr>
+                    <th>Software</th>
+                    <th>Quantity</th>
+                </tr>
+                <!-- Table rows will be added here dynamically -->
+            </table>
+        </div>
+    </div>
+    
+    <button onclick="calculateLicenses()">Calculate Licenses</button>
+    <button onclick="exportToCSV()">Export to CSV</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

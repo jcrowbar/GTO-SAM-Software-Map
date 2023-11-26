@@ -1,1 +1,62 @@
-y
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #4CAF50;
+    color: #ADD8E6; /* Light blue color for the title */
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hardware-area, .software-list, .license-summary {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    min-height: 200px;
+}
+
+.hardware-area {
+    background-color: #f9f9f9;
+}
+
+.software {
+    padding: 10px;
+    margin: 5px;
+    background-color: #e4e4e4;
+    cursor: pointer;
+}
+
+.software:active {
+    opacity: 0.6;
+}
+
+.license-summary {
+    width: 300px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
