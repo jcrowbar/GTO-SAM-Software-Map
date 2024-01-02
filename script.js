@@ -19,30 +19,9 @@ function drop(e) {
     const softwareId = e.dataTransfer.getData('text/plain');
     const software = document.getElementById(softwareId);
     hardwareArea.appendChild(software);
-    updateLicenseSummary(software.textContent);
-}
-
-function updateLicenseSummary(softwareName) {
-    const summaryTable = document.getElementById('summaryTable');
-    let row = summaryTable.querySelector(`tr[data-software="${softwareName}"]`);
-    if (!row) {
-        row = summaryTable.insertRow();
-        row.setAttribute('data-software', softwareName);
-        row.insertCell().textContent = softwareName;
-        row.insertCell().textContent = '1';
-    } else {
-        row.cells[1].textContent = parseInt(row.cells[1].textContent) + 1;
-    }
 }
 
 function calculateLicenses() {
+    // Placeholder for license calculation logic
     alert('Calculating licenses based on the selected software...');
 }
-
-function exportToCSV() {
-    let csvContent = "data:text/csv;charset=utf-8,System Specification,Software Name,Quantity\n";
-    const systemSpec = "Example System Spec"; // Replace with actual system specification data
-    const rows = document.querySelectorAll("#summaryTable tr");
-
-    rows.forEach((row, index) => {
-        if (index === 0) return; // Skip the header row
